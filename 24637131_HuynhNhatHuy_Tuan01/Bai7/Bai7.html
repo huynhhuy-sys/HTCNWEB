@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+    <!-- Phần mở đầu -->
+    <head>
+        <meta charset="UTF-8">
+        <title> ERD </title>
+    </head>
+    <!-- Phần thân -->
+    <body>
+
+        <h1> Entity Relationship Diagram </h1>
+        <hr>
+        <p> <b> Mục lục </b> </p>
+        <ol style="margin-right: auto;"> 
+            <li> <a href="#erd"> ERD </a> </li> 
+            <li> <a href="#thanhphan"> Các thành phần </a> </li>
+            <li> <a href="primary"> Khóa chính </a> </li>
+            <li> <a href="#foreign"> Khóa ngoại </a> </li>
+            <li> <a href="#cardinality"> Cardinality – Lực lượng của mối quan hệ </a> </li>
+        </ol>
+        <hr>
+
+        <!-- Phần 1-->
+        <div class="erd">
+            <h2 id="erd"> 1. ERD là gì? </h2>
+            <p> 
+                <b> 
+                    <a href="https://blog.tomorrowmarketers.org/entity-relationship-diagram-la-gi/">  
+                        ERD (Entity Relationship Diagram) 
+                    </a> 
+                </b> 
+                là sơ đồ thực thể – mối quan hệ, được sử dụng
+                để mô tả cấu trúc và mối quan hệ giữa các dữ liệu 
+                trong một hệ thống cơ sở dữ liệu.
+            </p>
+            <p> ERD giúp xác định: </p>
+            <ul>
+                <li> Hệ thống cần lưu trữ những đối tượng (Entity) nào. </li>
+                <li> Mỗi đối tượng có những thuộc tính (Attribute) nào.</li>
+                <li> Các đối tượng có mối quan hệ (Relationship) với nhau như thế nào.</li>
+                <li> Số lượng đối tượng có thể tham gia vào một mối quan hệ (Cardinality).</li>
+                <li> Các <b> khóa chính (Primary Key) </b> và <b> khóa ngoại (Foreign Key) </b> được sử dụng để liên kết dữ liệu.</li>
+            </ul>
+            <p> ERD ERD thường được xây dựng trước khi tạo cơ sở dữ liệu thực tế, giúp người thiết kế có cái nhìn tổng quan về dữ liệu và hạn chế sai sót khi xây dựng hệ thống.</p>
+            <p> Hình ảnh minh họa </p>
+            <img src="mo-hinh-erd-quan-ly-ban-hang-4.jpg" style="width: 600px; height: 400px;">
+        </div>
+        
+        <!-- Đường kẻ ngang -->
+        <hr>
+
+        <!-- Phần 2 -->
+        <div class="thanhphan-erd">
+            <h2 id="thanhphan"> 2. Các thành phần chính của ERD </h2>
+            <p> Một ERD thường bao gồm 3 thành phần cơ bản: </p>
+            <h3> 2.1 Entity – Thực thể </h3>
+            <p> Entity là đối tượng hoặc khái niệm mà hệ thống cần lưu trữ thông tin. </p>
+            <p> Ví dụ trong quản lý trường học: </p>
+            <ul>
+                <li> Sinh viên </li>
+                <li> Giảng viên </li>
+                <li> Môn học </li>
+                <li> Khoa </li>
+                <li> Lớp học </li>
+            </ul>
+            <p> 
+                Ví dụ: <br>
+                <img src="thuc_the.png" style="height: 400px; width: 400px;"><br>
+                Mỗi Entity khi chuyển sang cơ sở dữ liệu quan hệ thường tương ứng với một bảng(Table)
+            </p>
+            
+            <h3> 2.2 Attribute - Thuộc tính </h3>
+            <p> Attribute là những đặc điểm hoặc thông tin dùng để mô tả một Entity. </p>
+            <p>
+                Ví dụ Entity SINHVIEN có:
+                <img src="thuoc_tinh_2.2.png" style="height: 450px; width: 450px; display: block; margin-right: auto;">
+                Khi chuyển sang cơ sở dữ liệu dữ liệu quan hệ, các Attribute thường trở thành các cột (Column) của bảng
+            </p>
+
+            <h3> 2.3 Relationship – Mối quan hệ </h3>
+            <p> 
+                Relationship thể hiện sự liên kết giữa các Entity
+                <br> Ví dụ:
+                <img src="Relationship_2.3.png" style="height: 450px; width: 500px; display: block;"> 
+            </p>
+        </div>
+
+        <!-- Phần 3 -->
+        <div>
+            <h2 id="primary"> 3. Khóa chính – Primary Key </h2>
+            <p> 
+                Primary Key (PK) là thuộc tính hoặc tập hợp thuộc tính dùng để xác định duy nhất mỗi bản ghi trong một bảng. 
+                <br> Ví dụ:
+                <img src="Primary_Key.png" style="display: block; height: 400px; width: 500px;">
+                Đặc điểm của Primary Key
+                <ul>
+                    <li> Không được trùng nhau. </li>
+                    <li> Không được có giá trị NULL. </li>
+                    <li> Mỗi bảng thường có một Primary Key</li>
+                </ul>
+            </p>
+        </div>
+
+        <!-- Phần 4 -->
+        <div>
+            <h2 id="foreign"> 4. Khóa ngoại – Foreign Key </h2>
+            <p> Foreign Key (FK) là thuộc tính dùng để tạo liên kết giữa các bảng.</p>
+            <br> Ví dụ:
+            <img src="Foreign_key.jpg" style="display: block; height: 400px; width: 500px;">
+        </div>
+        
+        <!-- Phàn 5 -->
+        <div>
+            <h2 id="cardinality"> 5. Cardinality – Lực lượng của mối quan hệ </h2>
+            <p> 
+                Cardinality cho biết số lượng bản ghi của Entity này có thể liên kết với bao nhiêu bản ghi của Entity khác.
+                <br>
+                Có 3 dạng phổ biến:
+            </p>
+            <h3> 5.1. One-to-One (1:1) </h3>
+            <p> 
+                Một đối tượng của Entity A liên kết với một đối tượng của Entity B. 
+            </p>
+            <h3> 5.2. One-to-Many (1:N) </h3>
+            <p> 
+                Một đối tượng của Entity A có thể liên kết với nhiều đối tượng của Entity B.
+            </p>
+            <h3> 5.3. Many-to-Many (N:N) </h3>
+            <p> 
+                Một đối tượng của Entity A có thể liên kết với nhiều đối tượng của Entity B và ngược lại.
+            </p>
+
+            <p>
+                Ví dụ hình ảnh các mối quan hệ:<br>
+                <img src="1_1.jpg">
+            </p>
+        </div>
+
+        <!-- Đường kẻ ngang -->
+        <hr>
+        <address>
+            Thiết kế: 24637131 Huỳnh Nhật Huy<br>
+            Công cụ hỗ trợ: ChatGPT và Gemini<br>
+            Web tham khảo: Tomorrow Marketers - ERD là gì?
+        </address>
+    </body> 
+</html>

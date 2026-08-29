@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- Phần mở đầu -->
+    <head>
+        <title> Registration Form </title>
+    </head>
+
+    <!-- Phần thân -->
+    <body style="background-color: rgb(72, 123, 218);">
+        <form>
+            <!-- Logo -->
+            <div style="background-color: aqua; border: 2px solid black; text-align: center; width: 300px; margin: 0 auto;">
+                <h1> <b> ⚡Jackson <br> Electronics </b> </h1>
+            </div>
+
+            <h2 style="text-align: center;"> Registration Form</h2>
+
+            <p style="text-align: center;"> Register your Jackson Electonics product here </p>
+            
+            <!-- Phần 1-->
+            <table style="width: 100%; white-space: nowrap;" cellpadding = "8">
+                <!-- Hàng 1 -->
+                <tr>
+                    <td style="width: 250px;"> First Name </td>
+                    <td> <input type="text" name="firtname"> Last Name: <input type="text" name="lastname" style="width: 110px;"> </td>
+                </tr>
+
+                <!-- Hàng 2 -->
+                <tr>
+                    <td> Adrress #1: </td>
+                    <td> <input type="text" name="address1"> </td>
+                </tr>
+
+                <!-- Hàng 3 -->
+                <tr>
+                    <td> Address #2: </td>
+                    <td> <input type="text" name="address2"> </td>
+                </tr>
+
+                <!-- Hàng 4 -->
+                <tr>
+                    <td> 
+                        City: 
+                    </td>
+                    <td>
+                        <input type="text" name="city"> 
+                        State:
+                        <input type="text" name="state" style="width: 50px;">
+                        Zip:
+                        <input type="text" name="zip" style="width: 100px"> 
+                    </td>
+                </tr>
+
+                <!-- Hàng 5 -->
+                <tr> 
+                    <td> Country: </td>
+                    <td> <input type="text" name="country" value="United State"></td>
+                </tr>
+            </table>
+
+            <!-- Đường kẻ ngang -->
+            <hr style="border: none; border-top: 2px solid black;">
+            
+            <!-- Phần 2 -->
+            <table style="width: 100%; white-space: nowrap;" cellpadding = "8">
+                <!-- Hàng 1 -->
+                <tr>
+                    <td style="width: 250px;"> Product: </td>
+                    <td> 
+                        <select name="product">
+                            <option value="1"> ScanMaster</option>
+                        </select>
+                    </td>
+                </tr>
+
+                <!-- Hàng 2 -->
+                <tr>
+                    <td> Date Purchased: </td>
+                    <td> <input type="text" name="datepurchased"> </td>
+                </tr>
+
+                <!-- Hàng 3 -->
+                <tr>
+                    <td> Serial #: </td>
+                    <td> <input type="text" name="serial"> </td>
+                </tr>
+
+                <!-- Hàng 4 -->
+                <tr>
+                    <td> Used for: </td>
+                    <td>  
+                        <input type="radio" name="use" value="home"> Home <br>
+                        <input type="radio" name="use" value="business"> Business <br>
+                        <input type="radio" name="use" value="government"> Government <br>
+                    </td>
+                    <td style="vertical-align: top;">
+                        <input type="radio" name="use" value="edu"> Educational Insitution <br>
+                        <input type="radio" name="use" value="other"> Orther <br>
+                    </td>
+                </tr>
+
+                <!-- Hàng 5 -->
+                <tr>
+                    <td> System (check all that apply): </td>
+                    <td>
+                        <input type="checkbox" name="st" value="windows"> Windows <br>
+                        <input type="checkbox" name="st" value="macintosh"> Macintosh 
+                    </td>
+                    <td>
+                        <input type="checkbox" name="st" value="unix"> Unix <br>
+                        <input type="checkbox" name="st" value="other"> Other 
+                    </td>
+                </tr>
+            </table>
+
+            <!-- Đường kẻ ngang -->
+            <hr style="border: none; border-top: 2px solid black;">
+            <table style="width: 100%; white-space: nowrap;" cellpadding = "8">
+                <tr>
+                    <td style="width: 250px;">
+                        Comments?: 
+                    </td>
+                    <td>
+                        <textarea rows="5" cols="50" name="comment">
+
+                        </textarea>
+                    </td>
+                </tr>
+            </table>
+
+            <div style="text-align: center;">
+                <input type="submit" value="Click to register ">
+                <input type="reset" value="Click to cannel">
+            </div>
+        </form>
+    </body>
+</html>
