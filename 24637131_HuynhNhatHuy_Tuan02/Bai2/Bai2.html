@@ -8,7 +8,8 @@
         <style>
             *{
                 box-sizing: border-box;
-                margin: 0 auto;
+                margin: 0;
+                padding: 0;
             }
 
             #container{
@@ -18,34 +19,96 @@
             #header1{
                 width: 100%;
                 height: 100px;
-                background-color: rgba(128, 128, 128, 0.692);
+                background-image: url("background.png");
+                
+                display: flex; /* Xếp logo và chữ nằm ngang */
+                box-sizing: border-box;
+                align-items: center;
+                padding: 20px;
+            }
+            .logo{
+                height: 80px;
+                width: auto;
+                margin-left: 15px;
+            }
+            .tittle-group{
+                color: white;
             }
 
             #menu_ngang{
                 width: 100%;
                 height: 50px;
                 background-color: rgb(128, 128, 128);
+                
+            }
+            #menu_ngang ul{
+                list-style: none;
+                display: flex;
+                align-items: center; /* Căn giữa chữ theo chiều dọc */
+                padding-left: 20px; /* Đẩy mục đầu tiên cách mép trái 20px */
+                height: 100%;  /* Chiều cao bằng 50px của khung cha */
+            }
+            #menu_ngang ul li{
+                padding: 0 20px; /* CÁCH CHỮ: trên/dưới 0, trái/phải 20px */
+                font-size: 20px;
+                font-weight: bold;
             }
 
             #content1{
                 width: 35%;
-                height: 750px;
+                height: 650px;
                 float: left;
-                background-color: brown;
+                background-color: white;
             }
-
+            #content1 img{
+                width: 100%;
+                height: 250px;
+                object-fit: cover; /* Giữ ảnh không bị méo tỉ lệ khi chỉnh kích thước */
+                display: block; /* Chuyển ảnh từ inline sang block để nhận margin auto */
+                padding-left: 10px;
+                padding-right: 10px;
+                padding-top: 30px;
+            }
+            
             #content2{
                 width: 35%;
-                height: 750px;
+                height: 650px;
                 float: left;
-                background-color: greenyellow;
+                background-color: white;
+                padding-left: 15px;
+            }
+            .nd1_content2, nd2_content2{
+                height: 320px;
+                padding-top: 30px;
             }
 
             #content3{
                 width: 30%;
-                height: 750px;
+                height: 650px;
                 float: left;
-                background-color: skyblue;
+                background-color:white;
+                padding-top: 20px;
+                padding-left: 20px;
+            }
+            .nd1_content3 ul{
+                list-style: none;
+                color: red;
+            }
+            .nd1_content3 ul li{
+                padding-top: 10px;
+                padding-bottom: 10px;
+                padding-left: 15px;
+            }
+            .nd1_content3, .nd2_content3{
+                height: 320px;
+            }
+            .nd2_content3 {
+                margin-top: 20px;      /* Hoặc padding-top để tạo khoảng cách rõ ràng */
+            }
+            .nd2_content3 p {
+                padding-top: 10px;
+                padding-bottom: 10px;
+                padding-left: 15px;
             }
 
             #footer{
@@ -54,6 +117,12 @@
                 background-color: rgb(128, 128, 128);
                 clear: both;
             }
+
+            #footer address{
+                color: white;
+                font-weight: 900;
+                line-height: 50px;
+            }
         </style>
     </head>
 
@@ -61,22 +130,72 @@
     <body>
         <div id="container">
             <div id="header1"> 
-                <p> Đây là phần header1 </p>
+                <img class="logo" src="logo.png">
+                <div class="tittle-group">
+                    <h1 class="nd_header1">YOKO'S KITCHEN </h1>
+                    <p> JAPANESE COOKING CLASSES </p>
+                </div>
             </div>
             <div id="menu_ngang"> 
-                <p> Đây là menu ngang </p>
+                <ul>
+                    <li> home </li>
+                    <li style="color: white;"> classes </li>
+                    <li style="color: white;"> catering </li>
+                    <li style="color: white;"> about </li>
+                    <li style="color: white;"> contact </li>
+                </ul>
             </div>
             <div id="content1"> 
-                <p> Đây là nội dung 1 </p>
+                <img class="bokchoy" src="bokchoy.jpg">
+                <p style="margin-left: 10px;"> Bok Choi</p>
+                <br>
+                <img class="teriyaki" src="teriyaki.jpg">
+                <p style="padding-left: 10px;"> Teriyaki Sauce </p>
             </div>
             <div id="content2"> 
-                <p> Đây là nội dung 2 </p>
+                <div class="nd1_content2">
+                    <h2> Japanese Vegetarian</h2>
+                    <p style="color: red;"> Five week course in London </p>
+                    <p>
+                        A five week introduction to traditional<br>
+                        Japanese vegetarian meals, teaching you a<br>
+                        selection of rice and noodle dishes.
+                    </p>
+                </div>
+                
+                <div class="nd2_content2">
+                    <h2> Sauces Masterclass </h2>
+                    <p style="color: red;"> One day workshop </p>
+                    <p> 
+                        An intensive one day course looking at how<br>
+                        to create the most delicious sauces for use in<br>
+                        a range of Japanese cookery.
+                    </p>
+                </div>
             </div>
             <div id="content3"> 
-                <p> Đây là nội dung 3 </p>
+                <div class="nd1_content3"> 
+                    <h2 style="color: red;"> Popular Recipes </h2>
+                    <ul>
+                        <li> Yakitori (grilled chicken) </li>
+                        <li> Tsukune (minced chicken patties) </li>
+                        <li> Okonomiyaki (savory pancakes) </li>
+                        <li> Mizutaki (chicken stew) </li>
+                    </ul>
+                </div>
+
+                <div class="nd2_content3">
+                    <h2> Contact </h2>
+                    <p>
+                        Yoko's Kitchen<br>
+                        27 Redchurch Street<br>
+                        Shoreditch<br>
+                        London E2 7DP<br>                                                                              
+                    </p>
+                </div>
             </div>
             <div id="footer"> 
-                <p> Đây là footer </p>
+                <address> &#169;2011 Yoko's Kitchen </address>
             </div>
         </div>
     </body>
